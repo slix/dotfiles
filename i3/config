@@ -23,6 +23,15 @@ font pango:Tamsyn 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# Color Scheme (base 16)
+client.background #151515
+# class -> border, background, text, indicator
+client.focused #6a9fb5 #6a9fb5 #f5f5f5 #90a959
+client.focused_inactive #505050 #505050 #e0e0e0 #b0b0b0
+client.unfocused #151515 #151515 #d0d0d0 #b0b0b0
+client.urgent #ac4142 #ac4142 #f5f5f5 #90a959
+# client.placeholder (can't configure for some reason)
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -150,6 +159,18 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+
+        # Base 16
+        colors {
+                background #151515
+                statusline #f5f5f5
+                separator #505050
+
+                focused_workspace #619fb5 #619fb5 #f5f5f5
+                active_workspace #505050 #505050 #e0e0e0
+                inactive_workspace #151515 #151515 #d0d0d0
+                urgent_workspace #ac4142 #ac4142 #f5f5f5
+        }
 }
 
 # Laptop: make the easily accessible rectangle button lock the screen.
