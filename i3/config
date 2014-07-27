@@ -154,3 +154,9 @@ bar {
 
 # Laptop: make the easily accessible rectangle button lock the screen.
 bindsym XF86Launch1 exec --no-startup-id slimlock
+
+
+# Floating rules:
+
+# One of my dev projects with SFML needs no changes to window size
+for_window [class="spacetriangles" instance="spacetriangles"] floating enable
